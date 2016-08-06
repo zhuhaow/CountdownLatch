@@ -8,16 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		36B366571D563548003343AA /* CountdownLatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 36B366561D563548003343AA /* CountdownLatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36B3665F1D563581003343AA /* CountdownLatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B3665E1D563581003343AA /* CountdownLatch.swift */; };
+		36B366681D563833003343AA /* CountdownLatch-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 36B366671D563833003343AA /* CountdownLatch-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36B3666D1D563848003343AA /* CountdownLatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B3665E1D563581003343AA /* CountdownLatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		36B366531D563548003343AA /* CountdownLatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CountdownLatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36B366561D563548003343AA /* CountdownLatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountdownLatch.h; sourceTree = "<group>"; };
 		36B366581D563548003343AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36B3665E1D563581003343AA /* CountdownLatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownLatch.swift; sourceTree = "<group>"; };
+		36B366651D563833003343AA /* CountdownLatch-iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "CountdownLatch-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36B366671D563833003343AA /* CountdownLatch-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CountdownLatch-iOS.h"; sourceTree = "<group>"; };
+		36B366691D563833003343AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36B3666E1D563873003343AA /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		36B3664F1D563548003343AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36B366611D563833003343AA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -30,7 +45,9 @@
 		36B366491D563548003343AA = {
 			isa = PBXGroup;
 			children = (
+				36B3666E1D563873003343AA /* Readme.md */,
 				36B366551D563548003343AA /* CountdownLatch */,
+				36B366661D563833003343AA /* CountdownLatch-iOS */,
 				36B366541D563548003343AA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				36B366531D563548003343AA /* CountdownLatch.framework */,
+				36B366651D563833003343AA /* CountdownLatch-iOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,8 +66,18 @@
 			children = (
 				36B366561D563548003343AA /* CountdownLatch.h */,
 				36B366581D563548003343AA /* Info.plist */,
+				36B3665E1D563581003343AA /* CountdownLatch.swift */,
 			);
 			path = CountdownLatch;
+			sourceTree = "<group>";
+		};
+		36B366661D563833003343AA /* CountdownLatch-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				36B366671D563833003343AA /* CountdownLatch-iOS.h */,
+				36B366691D563833003343AA /* Info.plist */,
+			);
+			path = "CountdownLatch-iOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,6 +88,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				36B366571D563548003343AA /* CountdownLatch.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36B366621D563833003343AA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36B366681D563833003343AA /* CountdownLatch-iOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +120,24 @@
 			productReference = 36B366531D563548003343AA /* CountdownLatch.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		36B366641D563833003343AA /* CountdownLatch-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36B3666A1D563833003343AA /* Build configuration list for PBXNativeTarget "CountdownLatch-iOS" */;
+			buildPhases = (
+				36B366601D563833003343AA /* Sources */,
+				36B366611D563833003343AA /* Frameworks */,
+				36B366621D563833003343AA /* Headers */,
+				36B366631D563833003343AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CountdownLatch-iOS";
+			productName = "CountdownLatch-iOS";
+			productReference = 36B366651D563833003343AA /* CountdownLatch-iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -94,6 +148,9 @@
 				ORGANIZATIONNAME = "Zhuhao Wang";
 				TargetAttributes = {
 					36B366521D563548003343AA = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					36B366641D563833003343AA = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
@@ -111,12 +168,20 @@
 			projectRoot = "";
 			targets = (
 				36B366521D563548003343AA /* CountdownLatch */,
+				36B366641D563833003343AA /* CountdownLatch-iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		36B366511D563548003343AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36B366631D563833003343AA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -130,6 +195,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36B3665F1D563581003343AA /* CountdownLatch.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36B366601D563833003343AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36B3666D1D563848003343AA /* CountdownLatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +301,27 @@
 		36B3665C1D563548003343AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = CountdownLatch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.CountdownLatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		36B3665D1D563548003343AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -240,23 +335,46 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		36B3665D1D563548003343AA /* Release */ = {
+		36B3666B1D563833003343AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = CountdownLatch/Info.plist;
+				INFOPLIST_FILE = "CountdownLatch-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.CountdownLatch;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.zhuhaow.CountdownLatch-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		36B3666C1D563833003343AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "CountdownLatch-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.zhuhaow.CountdownLatch-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -277,6 +395,14 @@
 			buildConfigurations = (
 				36B3665C1D563548003343AA /* Debug */,
 				36B3665D1D563548003343AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		36B3666A1D563833003343AA /* Build configuration list for PBXNativeTarget "CountdownLatch-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36B3666B1D563833003343AA /* Debug */,
+				36B3666C1D563833003343AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
